@@ -1,0 +1,90 @@
+body {
+  background-color: black;
+}
+
+.background-image {
+  background: url(../img/background.jpg) center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: fixed;
+  left: 0;
+  filter: blur(9px);
+}
+.background-image::after {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: "";
+  position: absolute;
+}
+
+.nickname {
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  display: table;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 48px;
+  animation: text-3d-animation infinite;
+}
+
+.gradient {
+  background: red;
+  background: -webkit-linear-gradient(left, #002fff, #c7d2ff);
+  background: -o-linear-gradient(right, #002fff, #c7d2ff);
+  background: -moz-linear-gradient(right, #002fff, #c7d2ff);
+  background: linear-gradient(to right, #002fff, #c7d2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#percentage-text {
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  display: table;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 95%;
+}
+
+#vk {
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  display: table;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 57%;
+}
+
+#telegram {
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  display: table;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 43.5%;
+}
+
+.invisible {
+  transition-duration: 3s;
+  opacity: 0%;
+}
+
+.visible {
+  transition-duration: 3s;
+  opacity: 100%;
+}

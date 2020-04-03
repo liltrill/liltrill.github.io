@@ -1,0 +1,85 @@
+$menuColor: rgb(20, 20, 20);
+$menuTextColor: white;
+$gradient: rgb(81, 255, 0), rgb(0, 47, 255);
+
+body {
+  background-color: black;
+}
+
+.background-image {
+  background: url(../img/background.jpg) center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: fixed;
+  left: 0;
+  filter: blur(9px);
+
+  &::after {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    position: absolute;
+  }
+}
+
+@mixin base-text {
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  display: table;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+}
+
+.nickname {
+  @include base-text();
+  top: 50%;
+  font-size: 48px;
+  animation: text-3d-animation infinite;
+}
+
+.gradient {
+  background: red;
+  background: -webkit-linear-gradient(left, $gradient);
+  background: -o-linear-gradient(right, $gradient);
+  background: -moz-linear-gradient(right, $gradient);
+  background: linear-gradient(to right, $gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#percentage-text {
+  @include base-text();
+  top: 95%;
+}
+
+#vk {
+  @include base-text();
+  top: 57%;
+}
+
+#telegram {
+  @include base-text();
+  top: 43.5%;
+}
+
+@mixin transition {
+  transition-duration: 3s;
+}
+
+.invisible {
+  @include transition();
+  opacity: 0%;
+}
+
+.visible {
+  @include transition();
+  opacity: 100%;
+}
